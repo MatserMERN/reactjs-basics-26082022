@@ -5,6 +5,11 @@ import { GreetThree } from "./1.components/1.function/GreetThree";
 import Welcome from "./1.components/2.class/Welcome";
 import { WelcomeOne } from "./1.components/2.class/WelcomeOne";
 import UserAPI from "./10.ajax-calls/UserAPI";
+import UserDetails from "./10.ajax-calls/UserDetails";
+import Routing from "./11.Routing/Routing";
+import ComponentOne from "./12.prop-drilling/use-context/ComponentOne";
+import ContextOne from "./12.prop-drilling/use-context/ContextApi";
+import WishOne from "./12.prop-drilling/WishOne";
 import Hello from "./2.jsx/Hello";
 import Greeting from "./3.props/Greeting";
 import GreetingOne from "./3.props/GreetingOne";
@@ -29,6 +34,9 @@ import HooksWithArray from "./8.hooks/HooksWithArray";
 import HookWithObject from "./8.hooks/HookWithObject";
 import HookWithString from "./8.hooks/HookWithString";
 import LifecycleA from "./9.life-cycle-methods/LifecycleA";
+import ProductData from "./redux/components/ProductData";
+import Products from "./redux/components/Products";
+import UserData from "./redux/components/UserData";
 
 
 function App() {
@@ -37,7 +45,16 @@ function App() {
   }
   return (
     <div className="container">
-      <UserAPI />
+      <ProductData />
+      <Products />
+      {/* <UserData /> */}
+      {/* <ComponentOne />
+      <br />
+      <ContextOne /> */}
+      {/* <WishOne /> */}
+      {/* <Routing /> */}
+      {/* <UserDetails /> */}
+      {/* <UserAPI /> */}
       {/* <LifecycleA /> */}
       {/* <HooksWithArray /> */}
       {/* <HookWithObject /> */}

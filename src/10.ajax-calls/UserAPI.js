@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import { fakeUserApi } from '../api-store/fakeUserApi'
+import {Link} from "react-router-dom"
 
 export class UserAPI extends Component {
     constructor(){
@@ -15,12 +17,12 @@ export class UserAPI extends Component {
         // .then(response => response.json())
         // .then(data =>this.setState({users: data}) )
 
-        axios("https://jsonplaceholder.typicode.com/users")
+        fakeUserApi.get("/users")
         .then(response =>this.setState({users: response.data}) )
     }
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>User List</h1>
         <table className="table">
             <thead>
@@ -39,7 +41,9 @@ export class UserAPI extends Component {
                 {
                    this.state.users.map(user => (
                     <tr key={user.id}>
-                        <td>{user.name}</td>
+                        <td>
+                            <Link to={`/users/${user.id}`}>{user.name}</Link>
+                        </td>
                         <td>
                             <a href={`mailto:${user.email}`}>{user.email}</a>
                         </td>
